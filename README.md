@@ -34,10 +34,17 @@ The file prefix gives the kind of note:
 | `60`, `70`–`73` | presentation device, outlines, slide text |
 | `90` | open questions |
 
-Ask with the whole repo in context, for example:
+Clone it to search across all notes (best for real questions):
 
 ```sh
 gh repo clone aletar89/hf-incident-research && cd hf-incident-research
+```
+
+Or read single files without cloning:
+
+```sh
+gh api repos/aletar89/hf-incident-research/contents/00-INDEX.md -H "Accept: application/vnd.github.raw"
+# no auth needed: https://raw.githubusercontent.com/aletar89/hf-incident-research/main/00-INDEX.md
 ```
 
 The notes date from early September 2026. `30-src-sept-updates.md` covers later developments up to 21 Sept.
